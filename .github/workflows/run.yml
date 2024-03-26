@@ -28,8 +28,6 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          repository: MetaCubeX/meta-rules-dat
 
       - name: Checkout Loyalsoldier/domain-list-custom
         uses: actions/checkout@v4
@@ -52,7 +50,7 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.22'
+          go-version: 'stable'
           cache-dependency-path: ./custom/go.sum
 
       - name: Get geoip.dat relative files
