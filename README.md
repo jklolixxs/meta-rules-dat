@@ -19,6 +19,8 @@
 
 由此分支获取： [meta branch](https://github.com/jklolixxs/meta-rules-dat/tree/meta)
 
+由此分支获取： [sing-box branch](https://github.com/jklolixxs/meta-rules-dat/tree/sing)
+
 ## **country.mmdb,geoip.dat,geoip.db 内容**
 
 同 [Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat)
