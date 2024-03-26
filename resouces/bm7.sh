@@ -62,9 +62,9 @@ for ((i = 0; i < ${#list[@]}; i++)); do
 		cat ./rule/Clash/${list[i]}/${list[i]}.yaml | grep -v '#' | grep '\- DOMAIN-KEYWORD,' | sed 's/  - DOMAIN-KEYWORD,//g' > ${list[i]}/keyword.json
 	fi
 	# ipcidr
-	if [ -n "$(cat ./rule/Clash/${list[i]}/${list[i]}.yaml | grep '\- IP-CIDR')" ]; then
-		cat ./rule/Clash/${list[i]}/${list[i]}.yaml | grep -v '#' | grep '\- IP-CIDR' | sed 's/  - IP-CIDR,//g' | sed 's/  - IP-CIDR6,//g' > ${list[i]}/ipcidr.json
-	fi
+	# if [ -n "$(cat ./rule/Clash/${list[i]}/${list[i]}.yaml | grep '\- IP-CIDR')" ]; then
+	# 	cat ./rule/Clash/${list[i]}/${list[i]}.yaml | grep -v '#' | grep '\- IP-CIDR' | sed 's/  - IP-CIDR,//g' | sed 's/  - IP-CIDR6,//g' > ${list[i]}/ipcidr.json
+	# fi
 	# 转成json格式
 	# android package
 	if [ -f "${list[i]}/package.json" ]; then
@@ -100,12 +100,12 @@ for ((i = 0; i < ${#list[@]}; i++)); do
 		sed -i '$ s/,$/\n      ],/g' ${list[i]}/keyword.json
 	fi
 	# ipcidr
-	if [ -f "${list[i]}/ipcidr.json" ]; then
-		sed -i 's/^/        "/g' ${list[i]}/ipcidr.json
-		sed -i 's/$/",/g' ${list[i]}/ipcidr.json
-		sed -i '1s/^/      "ip_cidr": [\n/g' ${list[i]}/ipcidr.json
-		sed -i '$ s/,$/\n      ],/g' ${list[i]}/ipcidr.json
-	fi
+	# if [ -f "${list[i]}/ipcidr.json" ]; then
+	# 	sed -i 's/^/        "/g' ${list[i]}/ipcidr.json
+	# 	sed -i 's/$/",/g' ${list[i]}/ipcidr.json
+	# 	sed -i '1s/^/      "ip_cidr": [\n/g' ${list[i]}/ipcidr.json
+	# 	sed -i '$ s/,$/\n      ],/g' ${list[i]}/ipcidr.json
+	# fi
 	# 合并文件
 	if [ -f "${list[i]}/package.json" -a -f "${list[i]}/process.json" ]; then
 		mv ${list[i]}/package.json ${list[i]}.json
