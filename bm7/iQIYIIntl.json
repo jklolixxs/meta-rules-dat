@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "package_name": [
+        "com.iqiyi.i18n",
+        "com.iqiyi.i18n.tv"
+      ]
+    },
+    {
+      "domain": [
+        "inter.iqiyi.com",
+        "intl-rcd.iqiyi.com",
+        "intl-subscription.iqiyi.com",
+        "intl.iqiyi.com",
+        "iq.com",
+        "cache.video.iqiyi.com"
+      ],
+      "domain_suffix": [
+        ".inter.iqiyi.com",
+        ".intl-rcd.iqiyi.com",
+        ".intl-subscription.iqiyi.com",
+        ".intl.iqiyi.com",
+        ".iq.com"
+      ]
+    }
+  ]
+}
