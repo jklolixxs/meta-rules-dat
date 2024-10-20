@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "domain": [
+        "appcloud2.in.zhihu.com",
+        "mqtt.zhihu.com",
+        "sugar.zhihu.com"
+      ]
+    }
+  ]
+}
