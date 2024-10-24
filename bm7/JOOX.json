@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "package_name": [
+        "com.tencent.ibg.joox"
+      ]
+    },
+    {
+      "domain": [
+        "i-joox.com",
+        "joox.com",
+        "sanook.com"
+      ],
+      "domain_keyword": [
+        "jooxweb-api"
+      ],
+      "domain_suffix": [
+        ".i-joox.com",
+        ".joox.com",
+        ".sanook.com"
+      ]
+    }
+  ]
+}
